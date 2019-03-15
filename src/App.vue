@@ -1,23 +1,33 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <router-view class="container"/>
+    <toastr></toastr>
   </div>
 </template>
 
 <script>
+import Toastr from './components/Toastr'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Toastr
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+ @import url('//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icon');
+ .container {
+   width: 80vw;
+   margin: 0 auto;
+ }
+
+ .content {
+   margin-top: 20px;
+ }
+
+ .md-button {
+   margin-left: 0;
+ }
 </style>
